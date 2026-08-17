@@ -6,13 +6,15 @@ import { ActivatedRoute } from '@angular/router';
 
 describe('OrderDetailComponent', () => {
   beforeEach(async () => {
-    const orderSvc = { get: () => of({ id:1, customerId:1, createdAt:'', total:0, items:[] }) };
+    const orderSvc = {
+      get: () => of({ id: 1, customerId: 1, createdAt: '', total: 0, items: [] }),
+    };
     await TestBed.configureTestingModule({
       imports: [OrderDetailComponent],
       providers: [
         { provide: OrderService, useValue: orderSvc },
-        { provide: ActivatedRoute, useValue: { snapshot: { paramMap: new Map([['id','1']]) } } }
-      ]
+        { provide: ActivatedRoute, useValue: { snapshot: { paramMap: new Map([['id', '1']]) } } },
+      ],
     }).compileComponents();
   });
 

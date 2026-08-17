@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-loading',
   standalone: true,
   templateUrl: './loading.component.html',
-  styleUrls: ['./loading.component.css']
+  styleUrls: ['./loading.component.css'],
 })
 export class LoadingComponent {}

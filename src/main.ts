@@ -12,8 +12,5 @@ if (environment.production) {
 }
 
 bootstrapApplication(AppComponent, {
-  providers: [
-    provideRouter(routes),
-    importProvidersFrom(HttpClientModule, ReactiveFormsModule)
-  ]
+  providers: [provideRouter(routes), importProvidersFrom(HttpClientModule, ReactiveFormsModule)],
 }).catch(err => console.error(err));

@@ -5,17 +5,13 @@
     </div>
   </div>
 
-  <div *ngIf="loading" class="loading">
-    Loading orders...
-  </div>
+  <div *ngIf="loading" class="loading">Loading orders...</div>
 
   <div *ngIf="error" class="error">
     {{ error }}
   </div>
 
-  <div *ngIf="!loading && !error && orders.length === 0" class="empty">
-    No orders found.
-  </div>
+  <div *ngIf="!loading && !error && orders.length === 0" class="empty">No orders found.</div>
 
   <div *ngIf="!loading && orders.length > 0" class="table-container">
     <table class="table">
@@ -41,13 +37,7 @@
           </td>
 
           <td>
-            <button
-              class="btn"
-              type="button"
-              (click)="view(order.id)"
-            >
-              View
-            </button>
+            <button class="btn" type="button" (click)="view(order.id)">View</button>
           </td>
         </tr>
       </tbody>
@@ -55,25 +45,13 @@
   </div>
 
   <div class="pager">
-    <button
-      class="btn"
-      type="button"
-      (click)="prev()"
-      [disabled]="page <= 1 || loading"
-    >
+    <button class="btn" type="button" (click)="prev()" [disabled]="page <= 1 || loading">
       Previous
     </button>
 
-    <span>
-      Page {{ page }} of {{ totalPages }}
-    </span>
+    <span> Page {{ page }} of {{ totalPages }} </span>
 
-    <button
-      class="btn"
-      type="button"
-      (click)="next()"
-      [disabled]="page >= totalPages || loading"
-    >
+    <button class="btn" type="button" (click)="next()" [disabled]="page >= totalPages || loading">
       Next
     </button>
   </div>

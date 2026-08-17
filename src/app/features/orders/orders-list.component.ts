@@ -27,7 +27,7 @@ export class OrdersListComponent implements OnInit {
 
   constructor(
     private readonly orderService: OrderService,
-    private readonly router: Router,
+    private readonly router: Router
   ) {}
 
   ngOnInit(): void {
@@ -41,18 +41,16 @@ export class OrdersListComponent implements OnInit {
     const from = this.fromControl.value || undefined;
     const to = this.toControl.value || undefined;
 
-    this.orderService
-      .list(this.page, this.pageSize, undefined, from, to)
-      .subscribe({
-        next: (data) => {
-          this.orders = data.items;
-          this.totalPages = data.totalPages;
-          this.loading = false;
-        },
-        error: (error) => {
-          this.handleError(error);
-        },
-      });
+    this.orderService.list(this.page, this.pageSize, undefined, from, to).subscribe({
+      next: data => {
+        this.orders = data.items;
+        this.totalPages = data.totalPages;
+        this.loading = false;
+      },
+      error: error => {
+        this.handleError(error);
+      },
+    });
   }
 
   apply(): void {

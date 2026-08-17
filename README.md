@@ -4,9 +4,9 @@ Angular frontend for the Order Processing API.
 
 ## Requirements
 
-* Node.js
-* npm
-* Angular CLI
+- Node.js
+- npm
+- Angular CLI
 
 ## Installation
 

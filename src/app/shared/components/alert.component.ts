@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'app-alert',
   standalone: true,
   templateUrl: './alert.component.html',
-  styleUrls: ['./alert.component.css']
+  styleUrls: ['./alert.component.css'],
 })
 export class AlertComponent {
   @Input() message = '';

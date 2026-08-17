@@ -5,5 +5,5 @@ export const routes: Routes = [
   { path: '', component: OrdersListComponent },
   { path: 'orders', component: OrdersListComponent },
   { path: 'orders/:id', component: OrderDetailComponent },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' },
 ];

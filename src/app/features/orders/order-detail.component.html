@@ -5,13 +5,23 @@
   <div *ngIf="order">
     <h2>Order #{{ order.id }}</h2>
     <div class="card"><strong>Customer:</strong> {{ customerName }}</div>
-    <div class="card"><strong>Created:</strong> {{ order.createdAt | date:'medium' }}</div>
+    <div class="card"><strong>Created:</strong> {{ order.createdAt | date: 'medium' }}</div>
     <div class="card"><strong>Total:</strong> {{ formatMoney(order.total) }}</div>
 
     <h3>Items</h3>
-    <table class="table"><thead><tr><th>Product ID</th><th>Quantity</th></tr></thead>
-    <tbody>
-      <tr *ngFor="let it of order.items"><td>{{it.productId}}</td><td>{{it.quantity}}</td></tr>
-    </tbody></table>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let it of order.items">
+          <td>{{ it.productId }}</td>
+          <td>{{ it.quantity }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

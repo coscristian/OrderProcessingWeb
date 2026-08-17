@@ -9,9 +9,7 @@ describe('OrdersListComponent', () => {
     orderSvc = { list: jasmine.createSpy('list').and.returnValue(of([])) };
     await TestBed.configureTestingModule({
       imports: [OrdersListComponent],
-      providers: [
-        { provide: OrderService, useValue: orderSvc }
-      ]
+      providers: [{ provide: OrderService, useValue: orderSvc }],
     }).compileComponents();
   });
 
